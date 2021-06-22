@@ -3,6 +3,8 @@ const app = express();
 const userRoutes = require('./routes/userRoutes');
 const blogRoutes = require('./routes/blogRoutes');
 require('dotenv').config();
+
+//connecting mongodb
 require('./db/connect');
 
 app.use(express.json());
