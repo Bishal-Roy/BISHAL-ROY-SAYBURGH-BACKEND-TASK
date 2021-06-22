@@ -38,7 +38,7 @@ const updateBlog = async (req, res) => {
     } else {
       res
         .status(404)
-        .json({ message: 'blog not found or your are not allowed to update' });
+        .json({ message: 'Blog not found or Your are not allowed to Update' });
     }
   } catch (error) {
     res.json({ error: error });
@@ -56,7 +56,7 @@ const deleteBlog = async (req, res) => {
     } else {
       res
         .status(404)
-        .json({ message: 'Blog not found or You are not allowed to delete' });
+        .json({ message: 'Blog not found or You are not allowed to Delete' });
     }
   } catch (error) {
     res.json({ error: error });
@@ -78,7 +78,7 @@ const createComment = async (req, res) => {
       const updateBlog = await blogfound.save();
       res.json(updateBlog);
     } else {
-      res.status(404).json({ message: 'blog not found' });
+      res.status(404).json({ message: 'Blog not found' });
     }
   } catch (error) {
     res.json({ error: error });
